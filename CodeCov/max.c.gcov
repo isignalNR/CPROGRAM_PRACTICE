@@ -1,0 +1,34 @@
+        -:    0:Source:max.c
+        -:    0:Graph:max.gcno
+        -:    0:Data:max.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1:#include <stdio.h>
+        -:    2://using namespace std;
+        -:    3:
+        1:    4:int GreatestOfThree(int a,int b,int c){
+        1:    5:				  if((a>b) && (a>c)){    //for a > b and a>c case
+    #####:    6:									    return a;
+        -:    7:											   }
+        1:    8:					   else if(b>c){    //for b>c case 
+    #####:    9:										     return b;
+        -:   10:												    }
+        -:   11:						   else{
+        1:   12:											     return c;
+        -:   13:													   }
+        -:   14:							  return 0;
+        -:   15:}
+        -:   16:
+        -:   17://After checking for correctness comment main function to test //main_test.cpp
+        1:   18:int main()
+        -:   19:{
+        -:   20:				 // your code goes here
+        -:   21:				 int a,b,c;
+        1:   22:				 printf("Enter a b c\n");
+        1:   23:				 scanf("%d %d %d", &a, &b, &c);
+        -:   24:				  //cin>>a>>b>>c;
+        -:   25:					// cout<<GreatestOfThree(a,b,c);
+        1:   26:				 printf("big: %d\n", GreatestOfThree(a,b,c));
+        1:   27:					  return 0;
+        -:   28:
+        -:   29:}

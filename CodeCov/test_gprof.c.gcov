@@ -1,0 +1,56 @@
+        -:    0:Source:test_gprof.c
+        -:    0:Graph:test_gprof.gcno
+        -:    0:Data:test_gprof.gcda
+        -:    0:Runs:1
+        -:    0:Programs:1
+        -:    1://test_gprof.c
+        -:    2:
+        -:    3:#include<stdio.h>
+        -:    4:
+        1:    5:void func4(void)
+        -:    6:{
+        1:    7:				printf("\n Inside func4() \n");
+       12:    8:				for(int count=0;count<=10;count++)
+        -:    9:				{
+       11:   10:					printf("hello\n");
+        -:   11:				}
+        1:   12:}
+        -:   13:
+        1:   14:void func3(void)
+        -:   15:{
+        1:   16:				printf("\n Inside func3() \n");
+        1:   17:				for(int count=0;count<=0XFFFFFFF;count++);
+        1:   18:}
+        -:   19:
+        1:   20:void func2(void)
+        -:   21:{
+        1:   22:				printf("\n Inside func2() \n");
+        -:   23:
+        1:   24:				for(int count=0;count<=0XFFF;count++);
+        -:   25:
+        1:   26:				func3();
+        1:   27:}
+        -:   28:
+        1:   29:void func1(void)
+        -:   30:{
+        1:   31:				printf("\n Inside func1() \n");
+        1:   32:				for(int count=0;count<=0XFFFFFF;count++);
+        -:   33:
+        1:   34:				func2();
+        1:   35:}
+        -:   36:
+        1:   37:int main(void)
+        -:   38:{
+        1:   39:				printf("\n main() starts...\n");
+       12:   40:				for(int count=0;count<=10;count++)
+        -:   41:			 	{
+       11:   42:					printf("Hai\n");
+       11:   43:					printf("Hi\n");
+        -:   44:				}
+        -:   45:
+        1:   46:				func1();
+        1:   47:				func4();
+        1:   48:				printf("\n main() ends...\n");
+        -:   49:
+        1:   50:				return 0;
+        -:   51:}

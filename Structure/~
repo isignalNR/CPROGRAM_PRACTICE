@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+typedef struct bit_field
+{
+				unsigned char hours : 5;
+				unsigned char mins : 6;
+				unsigned char secs : 6;
+}time_t;
+
+int main()
+{
+		time_t alarm;
+		alarm.hours = 22;
+		alarm.mins  = 12;
+		alarm.secs  = 20;
+		bool k= true;
+
+		printf("%d %d %d\n", alarm.hours, alarm.mins, alarm.secs);
+		printf("Size of bit fields:%d\n", sizeof( time_t));
+
+		printf("%d\n", k);
+//		printf("%p %p %p\n", &alarm.hours, &alarm.mins, &alarm.secs);
+		return 0;
+}
+
+
